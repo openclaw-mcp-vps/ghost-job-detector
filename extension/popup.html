@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ghost Job Detector</title>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+
+      body {
+        margin: 0;
+        width: 340px;
+        font-family: "Space Grotesk", "Segoe UI", sans-serif;
+        background: #0d1117;
+        color: #e6edf3;
+      }
+
+      .wrap {
+        padding: 14px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 1rem;
+      }
+
+      p {
+        margin: 8px 0 0;
+        font-size: 0.8rem;
+        line-height: 1.4;
+        color: #8b9db6;
+      }
+
+      label {
+        display: block;
+        margin-top: 10px;
+        font-size: 0.75rem;
+        color: #9ab0ca;
+      }
+
+      input {
+        box-sizing: border-box;
+        width: 100%;
+        margin-top: 4px;
+        border: 1px solid #2b3a4f;
+        background: #0b1522;
+        color: #e6edf3;
+        border-radius: 8px;
+        padding: 8px 10px;
+        font-size: 0.8rem;
+      }
+
+      button {
+        width: 100%;
+        margin-top: 10px;
+        border: 0;
+        border-radius: 8px;
+        padding: 9px 12px;
+        background: #2f81f7;
+        color: #f8fbff;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      button:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+      }
+
+      .result {
+        margin-top: 12px;
+        border: 1px solid #26344a;
+        border-radius: 10px;
+        padding: 10px;
+        background: #0b1522;
+      }
+
+      .score {
+        font-size: 1.3rem;
+        font-weight: 700;
+      }
+
+      .risk {
+        margin-top: 4px;
+        font-size: 0.78rem;
+        color: #9ab0ca;
+      }
+
+      .error {
+        color: #ff9aa2;
+        font-size: 0.8rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>Ghost Job Detector</h1>
+      <p>Analyze the active job page in one click.</p>
+
+      <label for="apiBase">App URL</label>
+      <input id="apiBase" type="url" value="http://localhost:3000" />
+
+      <button id="analyzeBtn" type="button">Analyze Current Job</button>
+
+      <div id="output" class="result" hidden></div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

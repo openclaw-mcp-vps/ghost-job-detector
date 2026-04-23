@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Ghost Job Detector",
+  "version": "1.0.0",
+  "description": "Analyze job postings on job boards and detect ghost-job signals.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["storage", "activeTab", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
